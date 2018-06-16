@@ -1,0 +1,14 @@
+<div fxLayout="row wrap" fxLayoutAlign="center" fxLayout.xs="column" fxLayout.sm="column">
+  <div fxFlex="32%" *ngFor="let post of getRandom(posts)">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>{{ post.filename }}</mat-card-title>
+        <mat-card-subtitle>{{ post.author }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <img mat-card-image src="https://picsum.photos/200/300?image={{ post.id }}" alt="ng lorem picsum">
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
