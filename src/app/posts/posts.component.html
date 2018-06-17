@@ -1,13 +1,14 @@
 <div fxLayout="row wrap" fxLayoutAlign="center" fxLayout.xs="column" fxLayout.sm="column">
-  <div fxFlex="32%" *ngFor="let post of getRandom(posts)">
+  <div fxFlex="33" fxFlex.md="50" *ngFor="let post of getShuffledArray(posts)">
     <mat-card>
       <mat-card-header>
         <div mat-card-avatar class="header-image"></div>
-        <mat-card-title>{{ post.filename }}</mat-card-title>
-        <mat-card-subtitle>{{ post.author }}</mat-card-subtitle>
+        <mat-card-title>{{ post.author }}</mat-card-title>
+        <mat-card-subtitle>{{ post.author_url }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <img mat-card-image src="https://picsum.photos/200/300?image={{ post.id }}" alt="ng lorem picsum">
+        <img mat-card-image [src]="getSrc(post.id)" alt="ng lorem picsum">
+        <a href="{{ post.post_url }}">link</a>
       </mat-card-content>
     </mat-card>
   </div>
