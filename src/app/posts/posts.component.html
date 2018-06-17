@@ -4,11 +4,13 @@
       <mat-card-header>
         <div mat-card-avatar class="header-image"></div>
         <mat-card-title>{{ post.author }}</mat-card-title>
-        <mat-card-subtitle>{{ post.author_url }}</mat-card-subtitle>
+        <mat-card-subtitle>
+          <a href="{{ post.author_url }}">See my work</a>
+        </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <img mat-card-image [src]="getSrc(post.id)" alt="ng lorem picsum">
-        <a href="{{ post.post_url }}">link</a>
+        <a href="{{ post.post_url }}">Image source</a>
       </mat-card-content>
     </mat-card>
   </div>
