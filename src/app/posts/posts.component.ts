@@ -20,7 +20,7 @@ interface post {
 })
 export class PostsComponent implements OnInit {
 
-  private posts: post[];
+  public posts: post[];
   private imagePostWidth: number = 250;
   private imagePostHeight: number = 375;
 
