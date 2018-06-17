@@ -7,7 +7,7 @@ import {
   MatSidenavModule, 
   MatIconModule, 
   MatListModule,
-  MatCardModule,
+  MatCardModule
 } from '@angular/material';
 
 @NgModule({
@@ -28,7 +28,7 @@ import {
     MatListModule,
     MatCardModule,
     FlexModule
-  ],
+  ]
 })
 
-export class MaterialModule {}
+export class MaterialModule { }
