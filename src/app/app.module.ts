@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { LogUpdateService } from './shared/services/log-update.service'
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [LogUpdateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
